@@ -4,8 +4,8 @@ import ViewPager from "react-native-pager-view";
 import { CommonActions, useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import Page from "../components/Page";
-import Footer from "../components/Footer";
+import Page from "../components/onboarding/Page";
+import Footer from "../components/onboarding/Footer";
 import { STORAGE_KEYS } from "../util/constants";
 
 function Onboarding({ ...props }) {
@@ -29,7 +29,7 @@ function Onboarding({ ...props }) {
         index: 1,
         routes: [
           {
-            name: "Far",
+            name: "restaurants",
           },
         ],
       }),

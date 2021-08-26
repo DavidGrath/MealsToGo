@@ -1,7 +1,7 @@
 import React from "react";
 import { View, useWindowDimensions, StyleSheet } from "react-native";
 
-import RoundedButton from "./RoundedButton";
+import RoundedButton from "../RoundedButton";
 
 function Footer({
   backgroundColor,
