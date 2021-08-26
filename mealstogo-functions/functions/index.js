@@ -4,10 +4,6 @@ const geocode = require("./geocode");
 const payments = require("./payments");
 
 const { Client } = require("@googlemaps/google-maps-services-js");
-// !!! CAUTION !!! - DO NOT DEPLOY
-// I created these functions to run in another project. I cannot yet them
-// in that project till I have resolved billing issue
-// It will override the function I wrote on my other system
 
 // Create and Deploy Your First Cloud Functions
 // https://firebase.google.com/docs/functions/write-firebase-functions

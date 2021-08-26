@@ -5,11 +5,10 @@ const FLUTTERWAVE_PUBLIC_KEY = functions.config().flutterwave.public_key;
 const FLUTTERWAVE_PRIVATE_KEY = functions.config().flutterwave.secret_key;
 const flutterwave = new Flutterwave(
   FLUTTERWAVE_PUBLIC_KEY,
-  FLUTTERWAVE_PRIVATE_KEY
+  FLUTTERWAVE_PRIVATE_KEY,
 );
 
 module.exports.tokenize = function (request, response) {
-	      return response.status(400).send("Bad Request");
   const body = request.body;
   const payload = {
     token: body.token,
@@ -41,9 +40,9 @@ module.exports.verify = function (request, response) {
   };
   flutterwave.Transaction.verify(payload)
     .then(function (res) {
-	if(res.status === "error") {
-		throw new Error()
-	}
+      if (res.status === "error") {
+        throw new Error();
+      }
       const body = {
         data: {
           cardDetails: {
